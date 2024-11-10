@@ -88,7 +88,7 @@
 }
 
 .star-svg {
-    opacity: 1; /* Start hidden */
+    opacity: 0; /* Start hidden */
     transform: scale(0); /* Start small */
     transition: opacity 0.4s ease, transform 0.4s ease; /* Transition for fade and scale */
     position: absolute; /* Position stars absolutely */
@@ -116,32 +116,32 @@
 /* Show stars on hover */
 .star-container:hover .star-svg {
     opacity: 1; /* Fade in */
-    transform: scale(1.2); /* Scale up to 120% for all stars */
+    transform: scale(1.4); /* Scale up all stars */
     fill: #e8eaeb; /* Fill color for stars on hover */
 }
 
-/* Position the stars around the main star on hover */
-.star-container:hover .star-svg[data-index="1"] { transform: translate(-50px, 0); } /* Left */
-.star-container:hover .star-svg[data-index="2"] { transform: translate(-25px, 0); } /* Left */
-.star-container:hover .star-svg[data-index="3"] { transform: translate(25px, 0); } /* Right */
-.star-container:hover .star-svg[data-index="4"] { transform: translate(50px, 0); } /* Right */
+.star-container .main-star {
+    opacity: 1; /* Show only the main star */
+    transform: scale(1); /* Normal size initially */
+    fill: #e8eaeb; /* Initial fill color */
+    transition: fill 0.4s ease, transform 0.4s ease; /* Transition for gradual unfill and size up */
+}
 
-/* Keep stars visible after hover */
+/* Spread stars when active */
+.star-container.active .star-svg[data-index="1"] { transform: translate(-50px, 0); }
+.star-container.active .star-svg[data-index="2"] { transform: translate(-25px, 0); }
+.star-container.active .star-svg[data-index="3"] { transform: translate(25px, 0); }
+.star-container.active .star-svg[data-index="4"] { transform: translate(50px, 0); }
 .star-container.active .star-svg {
     opacity: 1; /* Keep stars visible */
-    transform: scale(1); /* Keep stars at larger size */
-    fill: #e8eaeb; /* Fill color for stars when active */
+    fill: #e8eaeb; /* Color for stars when active */
+    transform: scale(1.4); /* Scale up all stars */
 }
 
 /* Reset fill color when not hovering or active */
 .star-container .star-svg {
     fill: none; /* No fill color when not hovered or active */
     opacity: 0; /* Start hidden */
-}
-
-/* Ensure stars are visible when active */
-.star-container.active .star-svg {
-    opacity: 1; /* Keep stars visible when active */
 }
 
 .star-row {
@@ -162,19 +162,14 @@
 .star-container:hover .star-row .star-svg {
     display: block; /* Show all stars on hover */
     opacity: 1;
-    transform: scale(1.4); /* Scale up to 120% for all stars */
+    transform: scale(1.4); /* Scale up all stars */
 }
 
 .star-row .star-svg.filled {
     fill: #e8eaeb; /* Fill color for stars */
     stroke: #e8eaeb; /* Stroke color for stars */
     opacity: 1;
-}
-
-/* Ensure the main star is always visible */
-.star-container .main-star {
-    opacity: 1; /* Always visible */
-    fill: #e8eaeb; /* Set fill color if needed */
+    transform: scale(1.4); /* Scale up all stars */
 }
 
 /* Reset fill color when not hovering or active */
@@ -186,6 +181,7 @@
 /* Ensure stars are visible when active */
 .star-container.active .star-svg {
     opacity: 1; /* Keep stars visible when active */
+    transform: scale(1.4); /* Scale up all stars */
 }
 
 .main-star {

@@ -298,11 +298,3 @@ h1, h2, h3 {
         background-position: 100%; /* Move to the right */
     }
 }
-
-/* Medium screens (tablets) */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .bubble-about, .bubble-socials, .bubble-fiverr-stats, .bubble-image, .bubble-tools {
-        margin: 3rem auto; /* Center-align */
-        max-width: 70%; /* Larger width than on small screens */
-    }
-}
