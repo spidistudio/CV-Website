@@ -1,0 +1,10 @@
+/* Small screens (phones) */
+@media (max-width: 600px) {
+    .bubble-about, .bubble-socials, .bubble-fiverr-stats, .bubble-image, .bubble-tools {
+        margin: 2rem 0.2em; /* Center-align elements */
+        max-width: 90%; /* Limit the width to avoid overflow */
+    }
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+}

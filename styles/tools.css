@@ -1,0 +1,15 @@
+.tools-logo {
+    width: 55px; /* Fixed width */
+    height: 55px; /* Fixed height */
+    display: block;
+}
+
+.bubble-tools li {
+    margin-bottom: 15px; /* Adjust this value to control spacing */
+}
+
+.bubble-tools ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}

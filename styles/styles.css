@@ -1,0 +1,308 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #131414;
+    color: #e8eaeb;
+    font-weight: 300;
+}
+
+h1, h2, h3 {
+    font-weight: 550;
+    padding-top: 30px;
+    padding-left: 25px;
+}
+
+@keyframes slideInAbout {
+    0% {
+        transform: translateX(-100%); /* Start from the left */
+        opacity: 0; /* Start invisible */
+        margin-left: -26rem; /* Start with negative margin */
+    }
+    75% {
+        transform: (translateX(-80%));
+    }
+    100% {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1; /* Fully visible */
+        margin-left: 26rem;
+    }
+}
+
+@keyframes slideInSocials {
+    0% {
+        transform: translateX(100%); /* Start from the left */
+        opacity: 0; /* Start invisible */
+        margin-left: -26rem; /* Start with negative margin */
+    }
+    75% {
+        transform: (translateX(80%));
+    }
+    100% {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1; /* Fully visible */
+        margin-left: 26rem;
+    }
+}
+
+@keyframes slideInFiverrStats {
+    0% {
+        transform: translateX(100%); /* Start from the left */
+        opacity: 0; /* Start invisible */
+        margin-left: -32rem; /* Start with negative margin */
+    }
+    75% {
+        transform: (translateX(80%));
+    }
+    100% {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1; /* Fully visible */
+        margin-left: 36rem;
+    }
+}
+
+@keyframes slideInImage {
+    0% {
+        transform: translateX(-100%); /* Start from the left */
+        opacity: 0; /* Start invisible */
+        margin-left: 120rem; /* Start with negative margin */
+    }
+    75% {
+        transform: (translateX(-80%));
+    }
+    100% {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1; /* Fully visible */
+        margin-left: 63rem;
+    }
+}
+
+@keyframes slideInTools {
+    0% {
+        transform: translateX(-100%); /* Start from the left */
+        opacity: 0; /* Start invisible */
+        margin-left: 150rem; /* Start with negative margin */
+    }
+    75% {
+        transform: (translateX(-80%));
+    }
+    100% {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1; /* Fully visible */
+        margin-left: 87.5rem;
+    }
+}
+
+.bubble-about {
+    width: 80%;
+    max-width: 550px;
+    height: 180px;
+    border-radius: 15px;
+    background-color: #0f0f0f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    margin: 14rem 26rem 20px; /* Set margin-top to 14rem */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInAbout 1s ease;
+    left: 26em; /* Set final position */
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+.bubble-socials {
+    width: 80%;
+    max-width: 130px;
+    height: 412px;
+    border-radius: 15px;
+    background-color: #0f0f0f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    margin: 2rem 26rem 20px; /* Change top margin to match bubble-about */
+    display: flex;
+    flex-direction: column;
+    animation: slideInSocials 1s ease;
+    left: 28rem; /* Set final position */
+}
+
+.bubble-socials-h {
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 0px;
+}
+
+.bubble-fiverr-stats {
+    width: 80%;
+    max-width: 403px;
+    height: 412px;
+    border-radius: 15px;
+    background-color: #0f0f0f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    margin-top: -27rem;
+    margin-left: 36rem;
+    display: flex;
+    flex-direction: column;
+    animation: slideInFiverrStats 1s ease;
+    left: 36rem; /* Set final position */
+}
+
+.fiverr-stats-h {
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 0px;
+}
+
+/* Ensure the bubble image container is styled as a bubble */
+.bubble-image {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    width: 100%; /* Full width of the bubble */
+    height: 100%; /* Full height of the bubble */
+    max-width: 320px;
+    max-height: 320px;
+    border-radius: 15px; /* Match the bubble style */
+    background-color: #0f0f0f; /* Background color for the bubble */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    margin-top: -39.5rem;
+    margin-left: 63rem;
+    padding: 40px 20px 40px 20px;
+    animation: slideInImage 1s ease;
+    margin-left: 63rem; /* Set final position */
+}
+
+/* Style for the personal image */
+.personal-image {
+    width: 100%; /* Make the image responsive */
+    height: 100%; /* Maintain aspect ratio */
+    max-width: 290px;
+    max-height: 290px;
+    object-fit: cover; /* Cover the bubble area */
+    border-radius: 5px;
+}
+
+.tools-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.bubble-tools {
+    width: 80%;
+    max-width: 140px;
+    height: 630px;
+    border-radius: 15px;
+    background-color: #0f0f0f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    margin-top: -23rem;
+    margin-left: 87.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: space-around; /* Distribute space vertically */
+    animation: slideInTools 1s ease;
+    left: 28rem;
+}
+
+.bubble-tools-h {
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+.about-paragraph {
+    padding-left: 25px;
+    padding-bottom: 25px;
+    font-size: 15px;
+    word-spacing: 0.2em;
+    line-height: 1.4;
+}
+
+#emoji-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Emoji confetti styles */
+.emoji-confetti {
+    font-size: 1.5rem;
+    position: absolute;
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Initial jump effect */
+}
+
+.fade-in {
+    opacity: 1; /* Fade in effect */
+}
+
+/* Paragraph container */
+#content {
+    text-align: center;
+}
+
+/* Hover words */
+.hover-word {
+    position: relative;
+    cursor: pointer;
+    color: #a6a6a6;
+    transition: color 0.3s ease;
+}
+
+.hover-word:hover {
+    color: #e8eaeb;
+}
+
+/* Updated Emoji confetti styles */
+.emoji-confetti {
+    font-size: 1.5rem;
+    position: absolute;
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Initial jump effect */
+}
+
+/* Fade-in class */
+.fade-in {
+    opacity: 1;
+}
+
+/* Apply the animation to the emoji */
+.emoji-confetti {
+    animation: jumpAndFall 1s ease forwards; /* Use the new animation */
+}
+
+.hover-word.serbia {
+    color: #adadad; /* Initial text color */
+    background: linear-gradient(90deg, red, blue, white); /* Horizontal gradient */
+    background-clip: text; /* Clip the background to the text */
+    -webkit-background-clip: text; /* For Safari */
+    transition: color 0.5s ease; /* Smooth transition for color */
+    display: inline-block; /* Ensure the text behaves like a block for background-clip */
+}
+
+.hover-word.serbia:hover {
+    color: transparent; /* Make the text transparent to show the gradient */
+    background: linear-gradient(90deg, red, blue, white); /* Apply the gradient on hover */
+    background-clip: text; /* Ensure the gradient is clipped to the text */
+    -webkit-background-clip: text; /* For Safari */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0%; /* Start at the left */
+    }
+    100% {
+        background-position: 100%; /* Move to the right */
+    }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .bubble-about, .bubble-socials, .bubble-fiverr-stats, .bubble-image, .bubble-tools {
+        margin: 3rem auto; /* Center-align */
+        max-width: 70%; /* Larger width than on small screens */
+    }
+}

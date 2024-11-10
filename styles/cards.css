@@ -1,0 +1,194 @@
+.clients {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    background: #131414;
+    position: relative;
+    width: 135px;
+    height: 160px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    color: white; /* Text color */
+    font-size: 1.2rem; /* Font size similar to h2 */
+    text-align: center;
+    padding: 5px; /* Center text */
+    margin: 0; /* Remove auto margin */
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.clients svg, .clients p {
+    margin: 0; /* Remove any default margin */
+    display: block; /* Ensure block display for centering */
+}
+
+.experience {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    background: #131414;
+    position: relative;
+    width: 135px;
+    height: 160px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    margin-top: -180px;
+    margin-left: 170px;
+    color: white; /* Text color */
+    font-size: 1.2rem; /* Font size similar to h2 */
+    text-align: center;
+    padding: 5px; /* Center text */
+    border-radius: 10px; /* Rounded corners */
+    padding-bottom: 15px;
+}
+
+.experience svg {
+    margin-bottom: 5px;
+}
+
+.rating {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    background: #131414;
+    position: relative;
+    width: 310px;
+    height: 80px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    margin-top: 25px;
+    margin-left: 0px;
+    color: white; /* Text color */
+    font-size: 1.2rem; /* Font size similar to h2 */
+    text-align: center;
+    padding-top: 10px;
+}
+
+.rating svg {
+    margin-bottom: 5px; /* Space between star and text */
+}
+
+.rating-text {
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+
+.star-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.star-svg {
+    opacity: 1; /* Start hidden */
+    transform: scale(0); /* Start small */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Transition for fade and scale */
+    position: absolute; /* Position stars absolutely */
+}
+
+.main-star {
+    display: block; /* Show only the main star */
+    opacity: 1; /* Ensure the main star is visible */
+    transform: scale(1); /* Keep the main star at normal size */
+}
+
+/* Position the stars at the same location initially */
+.star-svg[data-index="0"] { /* Main star */
+    transform: translate(0, 0); /* Main star position */
+}
+
+.star-svg[data-index="1"], /* Left */
+.star-svg[data-index="2"], /* Left */
+.star-svg[data-index="3"], /* Right */
+.star-svg[data-index="4"] { /* Right */
+    transform: translate(0, 0); /* Start at the same position */
+    transform: scale(1);
+}
+
+/* Show stars on hover */
+.star-container:hover .star-svg {
+    opacity: 1; /* Fade in */
+    transform: scale(1.2); /* Scale up to 120% for all stars */
+    fill: #e8eaeb; /* Fill color for stars on hover */
+}
+
+/* Position the stars around the main star on hover */
+.star-container:hover .star-svg[data-index="1"] { transform: translate(-50px, 0); } /* Left */
+.star-container:hover .star-svg[data-index="2"] { transform: translate(-25px, 0); } /* Left */
+.star-container:hover .star-svg[data-index="3"] { transform: translate(25px, 0); } /* Right */
+.star-container:hover .star-svg[data-index="4"] { transform: translate(50px, 0); } /* Right */
+
+/* Keep stars visible after hover */
+.star-container.active .star-svg {
+    opacity: 1; /* Keep stars visible */
+    transform: scale(1); /* Keep stars at larger size */
+    fill: #e8eaeb; /* Fill color for stars when active */
+}
+
+/* Reset fill color when not hovering or active */
+.star-container .star-svg {
+    fill: none; /* No fill color when not hovered or active */
+    opacity: 0; /* Start hidden */
+}
+
+/* Ensure stars are visible when active */
+.star-container.active .star-svg {
+    opacity: 1; /* Keep stars visible when active */
+}
+
+.star-row {
+    display: flex; /* Show all stars in a row */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 5px;
+    opacity: 1;
+}
+
+.star-row .star-svg {
+    display: block; /* Initially hide the outer stars */
+    opacity: 1;
+}
+
+.star-container:hover .star-row .star-svg {
+    display: block; /* Show all stars on hover */
+    opacity: 1;
+    transform: scale(1.4); /* Scale up to 120% for all stars */
+}
+
+.star-row .star-svg.filled {
+    fill: #e8eaeb; /* Fill color for stars */
+    stroke: #e8eaeb; /* Stroke color for stars */
+    opacity: 1;
+}
+
+/* Ensure the main star is always visible */
+.star-container .main-star {
+    opacity: 1; /* Always visible */
+    fill: #e8eaeb; /* Set fill color if needed */
+}
+
+/* Reset fill color when not hovering or active */
+.star-container .star-svg {
+    fill: none; /* No fill color when not hovered or active */
+    opacity: 0; /* Start hidden */
+}
+
+/* Ensure stars are visible when active */
+.star-container.active .star-svg {
+    opacity: 1; /* Keep stars visible when active */
+}
+
+.main-star {
+    opacity: 1;
+    display: block;
+}
