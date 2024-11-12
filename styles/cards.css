@@ -1,27 +1,58 @@
 .clients {
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    background: #131414;
     position: relative;
     width: 135px;
     height: 160px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 16px;
+    color: #e8eaeb;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 5px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
-    color: white; /* Text color */
-    font-size: 1.2rem; /* Font size similar to h2 */
-    text-align: center;
-    padding: 5px; /* Center text */
-    margin: 0; /* Remove auto margin */
-    padding-bottom: 15px;
-    padding-top: 10px;
+    margin-top: -1.4rem;
+    padding-bottom: 20px;
 }
 
 .clients svg, .clients p {
     margin: 0; /* Remove any default margin */
     display: block; /* Ensure block display for centering */
+}
+
+.card {
+    position: relative;
+    width: 135px;
+    height: 160px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.clients:hover .card {
+    transform: rotateY(180deg); /* Flip the card on hover */
+}
+
+.card-front {
+    background: #131414;
+}
+
+.card-back {
+    transform: rotateY(180deg); /* This sets up the back for the flip */
+    background: #131414;
+    font-size: 15px;
+    margin-left: -11px;
+    color: #e8eaeb;    
 }
 
 .experience {
@@ -38,7 +69,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
     margin-top: -180px;
     margin-left: 170px;
-    color: white; /* Text color */
+    color: #e8eaeb; /* Text color */
     font-size: 1.2rem; /* Font size similar to h2 */
     text-align: center;
     padding: 5px; /* Center text */
@@ -49,6 +80,7 @@
 .experience svg {
     margin-bottom: 5px;
 }
+
 
 .rating {
     display: flex; /* Enable flexbox */
@@ -64,7 +96,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
     margin-top: 25px;
     margin-left: 0px;
-    color: white; /* Text color */
+    color: #e8eaeb; /* Text color */
     font-size: 1.2rem; /* Font size similar to h2 */
     text-align: center;
     padding-top: 10px;
@@ -75,8 +107,7 @@
 }
 
 .rating-text {
-    padding-top: 15px;
-    padding-bottom: 0px;
+    margin: 5px 1rem;
 }
 
 .star-container {
@@ -85,6 +116,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin: 10px 6em;
 }
 
 .star-svg {
@@ -92,6 +124,7 @@
     transform: scale(0); /* Start small */
     transition: opacity 0.4s ease, transform 0.4s ease; /* Transition for fade and scale */
     position: absolute; /* Position stars absolutely */
+    margin-bottom: 10px;
 }
 
 .main-star {

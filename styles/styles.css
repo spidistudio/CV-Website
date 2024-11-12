@@ -166,6 +166,13 @@ h1, h2, h3 {
     padding: 40px 20px 40px 20px;
     animation: slideInImage 1s ease;
     margin-left: 63rem; /* Set final position */
+    transform: scale(1);
+    transition: transform 0.3s ease-out;
+}
+
+.bubble-image:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
 }
 
 /* Style for the personal image */
@@ -175,7 +182,14 @@ h1, h2, h3 {
     max-width: 290px;
     max-height: 290px;
     object-fit: cover; /* Cover the bubble area */
-    border-radius: 5px;
+    border-radius: 15px;
+    transform: scale(1);
+    transition: transform 0.3s ease-out;
+}
+
+.personal-image:hover {
+    transform: scale(1.15);
+    transition: transform 0.3s ease;
 }
 
 .tools-container {

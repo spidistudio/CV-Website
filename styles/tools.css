@@ -2,6 +2,8 @@
     width: 55px; /* Fixed width */
     height: 55px; /* Fixed height */
     display: block;
+    transform: scale(0.8);
+    transition: transform 0.3s ease-out;
 }
 
 .bubble-tools li {
@@ -12,4 +14,13 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+.tools-logo:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #0274b3;
 }
