@@ -1,9 +1,9 @@
 ## About Me
 
 This is my personal CV website, which showcases my experience working in this field. <br>
-I started learning HTML at 11 years old, when I learned how to make a portofolio. Simple text, links to my Youtube and school. <br>
-At 12 I started learning Python. At 13 I started learning C# and made some 3D computer and mobile games. <br>
-At 14 I've started doing projects for other people using Python automation. <br>
+I started learning **HTML at 11 years old**, when I learned how to make a portofolio. Simple text, a link to my Youtube channel and school. <br>
+At 12 I started learning Python. At 13 I started learning C# and made some **3D computer and mobile games**. <br>
+At 14 I've started doing projects for other people using **Python automation**, web scraping and process automation. I've used various solutions such as **proxy rotation**, Selenium for automated browsing, **Google Maps API** for business info extraction...<br>
 Today, at 17 years old, I'm looking for more. More information. More knowledge. More experience. <br>
 Any project, idea or script you want done, I am willing to do and learn how to improve.
 
