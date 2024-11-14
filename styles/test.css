@@ -1,10 +1,8 @@
-/* Emoji container to hold all the emojis */
 #emoji-container {
   position: relative;
-  pointer-events: none; /* So it doesn’t interfere with other elements */
+  pointer-events: none; 
 }
 
-/* Style for words that trigger the emoji effect */
 .hover-word {
   position: relative;
   cursor: pointer;
@@ -15,5 +13,5 @@
 .emoji-confetti {
   font-size: 1.5rem;
   opacity: 0;
-  transition: opacity 0.3s ease-in; /* Fade in */
+  transition: opacity 0.3s ease-in; 
 }

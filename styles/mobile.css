@@ -1,11 +1,59 @@
 /* Small screens (phones) */
 @media (max-width: 600px) {
+
+    @keyframes slideInAbout {
+        0% {
+            transform: translateX(-100%); /* Start from the left */
+            opacity: 0; /* Start invisible */
+            margin-left: -10rem; /* Start with negative margin */
+        }
+        75% {
+            transform: (translateX(-80%));
+        }
+        100% {
+            transform: translateX(0); /* End at the original position */
+            opacity: 1; /* Fully visible */
+            margin-left: 2rem;
+        }
+    }
+
+    @keyframes slideInSocials {
+        0% {
+            transform: translateX(100%); /* Start from the left */
+            opacity: 0; /* Start invisible */
+            margin-left: 10rem; /* Start with negative margin */
+        }
+        75% {
+            transform: (translateX(80%));
+        }
+        100% {
+            transform: translateX(0); /* End at the original position */
+            opacity: 1; /* Fully visible */
+            margin-left: 2.6rem;
+        }
+    }
+
+    @keyframes slideInFiverrStats {
+        0% {
+            transform: translateX(100%); /* Start from the left */
+            opacity: 0; /* Start invisible */
+            margin-left: -10rem; /* Start with negative margin */
+        }
+        75% {
+            transform: (translateX(80%));
+        }
+        100% {
+            transform: translateX(0); /* End at the original position */
+            opacity: 1; /* Fully visible */
+            margin-left: 2.6rem;
+        }
+    }
+
     .bubble-about, .bubble-socials, .bubble-fiverr-stats, .bubble-image, .bubble-tools {
         max-width: 90%; /* Limit the width to avoid overflow */
         grid-template-columns: 1fr;
         display: flex;
         justify-content: center; /* Centers items horizontally */
-        animation: none;
         margin: auto;
         margin-top: 3rem;
     }
@@ -15,7 +63,6 @@
     }
 
     .fiverr-cards {
-        margin-right: auto;
         max-width: 130px;
         margin-top: 1rem;
     }
@@ -23,10 +70,12 @@
     .experience {
         max-width: 130px;
         margin-top: 0px;
+        margin-left: 8.5rem;
     }
 
     .bubble-tools {
         max-width: 70%;
+        margin-bottom: 3rem;
     }
     
     h1, h2, h3 {
@@ -40,7 +89,7 @@
     .clients {
         margin-right: auto;
         margin-bottom: auto;
-        margin-left: -2rem;
+        margin-left: -1.5rem;
         margin-top: 1rem;
         width: 40px;
         height: 110px;
@@ -59,7 +108,7 @@
     .rating {
         margin-top: 2rem;
         margin-bottom: 0rem;
-        margin-left: 0.4rem;
+        margin-left: -1.2rem;
         width: 290px;
         height: 50px;
         padding-bottom: 10px;
@@ -75,6 +124,7 @@
         max-width: 75%;
         max-height: 75%;
         transition: none;
+        animation: none;
         padding-top: 25px;
         padding-bottom: 25px;
     }
