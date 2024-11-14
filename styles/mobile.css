@@ -1,10 +1,82 @@
 /* Small screens (phones) */
 @media (max-width: 600px) {
     .bubble-about, .bubble-socials, .bubble-fiverr-stats, .bubble-image, .bubble-tools {
-        margin: 2rem 0.2em; /* Center-align elements */
         max-width: 90%; /* Limit the width to avoid overflow */
+        grid-template-columns: 1fr;
+        display: flex;
+        justify-content: center; /* Centers items horizontally */
+        animation: none;
+        margin: auto;
+        margin-top: 3rem;
     }
+
+    .bubble-about-h {
+        margin-top: 0px;
+    }
+
+    .fiverr-cards {
+        margin-right: auto;
+        max-width: 130px;
+        margin-top: 1rem;
+    }
+
+    .experience {
+        max-width: 130px;
+        margin-top: 0px;
+    }
+
+    .bubble-tools {
+        max-width: 70%;
+    }
+    
     h1, h2, h3 {
         font-size: 1.5em;
     }
+    
+    .fiverr-cards {
+        size: 0.8;
+    }
+
+    .clients {
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: -2rem;
+        margin-top: 1rem;
+        width: 40px;
+        height: 110px;
+    }
+
+    .card-back p {
+        font-size: 1em;
+    }
+
+    .experience {
+        margin-top: -8.2rem;
+        width: 130px;
+        height: 165px;
+    }
+
+    .rating {
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+        margin-left: 0.4rem;
+        width: 290px;
+        height: 50px;
+        padding-bottom: 10px;
+        padding-top: 20px;
+    }
+    
+    .bubble-about {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .bubble-image {
+        max-width: 75%;
+        max-height: 75%;
+        transition: none;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
 }

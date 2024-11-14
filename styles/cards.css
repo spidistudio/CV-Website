@@ -1,3 +1,7 @@
+.fiverr-cards {
+    margin-top: 2rem;
+}
+
 .clients {
     position: relative;
     width: 135px;
@@ -27,8 +31,7 @@
 }
 
 .clients svg, .clients p {
-    margin: 0; /* Remove any default margin */
-    display: block; /* Ensure block display for centering */
+    margin: 0; /* Ensure block display for centering */
 }
 
 .card {
@@ -62,7 +65,7 @@
     align-items: center; /* Center items horizontally */
     background: #131414;
     position: relative;
-    width: 135px;
+    max-width: 135px;
     height: 160px;
     border-radius: 16px;
     overflow: hidden;
