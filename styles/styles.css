@@ -3,6 +3,10 @@ body {
     background-color: #131414;
     color: #e8eaeb;
     font-weight: 300;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
 }
 
 h1, h2, h3 {
@@ -165,30 +169,49 @@ h1, h2, h3 {
     margin-left: 63rem;
     padding: 40px 20px 40px 20px;
     animation: slideInImage 1s ease;
-    margin-left: 63rem; /* Set final position */
     transform: scale(1);
     transition: transform 0.3s ease-out;
+    position: relative; /* Required for absolute positioning of the blur */
 }
 
+/* This is the wrapper that holds the entire page's content */
+.main-content .main-content-2 {
+    position: relative;
+    z-index: 1;
+    transition: filter 0.5s ease-out;
+}
+
+/* Blur background class applied on hover */
+.blur-background {
+    filter: blur(5px);
+}
+
+/* Bubble image hover effect */
+.bubble-image {
+    position: relative; /* Keeps the image within its container */
+    z-index: 100; /* Ensure it's on top */
+    transition: transform 0.35s ease;
+}
+
+/* Hover effect for the image container */
 .bubble-image:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
+    transform: scale(1.6);
+        box-shadow: 0px 0px 100px rgb(109, 52, 21); /* Shadow for depth */;
 }
 
 /* Style for the personal image */
 .personal-image {
-    width: 100%; /* Make the image responsive */
-    height: 100%; /* Maintain aspect ratio */
+    width: 100%;
+    height: 100%;
     max-width: 290px;
     max-height: 290px;
-    object-fit: cover; /* Cover the bubble area */
+    object-fit: cover;
     border-radius: 15px;
-    transform: scale(1);
     transition: transform 0.3s ease-out;
 }
 
 .personal-image:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 
