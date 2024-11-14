@@ -1,4 +1,4 @@
-# This is my personal CV website, which showcases my experience working in this field.
+### This is my personal CV website, which showcases my experience working and learning to code.
 
 ## About Me
 
