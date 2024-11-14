@@ -1,13 +1,13 @@
 .tools-logo {
-    width: 55px; /* Fixed width */
-    height: 55px; /* Fixed height */
+    width: 55px;
+    height: 55px; 
     display: block;
     transform: scale(0.8);
     transition: transform 0.3s ease-out;
 }
 
 .bubble-tools li {
-    margin-bottom: 15px; /* Adjust this value to control spacing */
+    margin-bottom: 15px; 
 }
 
 .bubble-tools ul {
