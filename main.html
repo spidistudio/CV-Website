@@ -14,7 +14,14 @@
 <body>
     <script src="scripts/emojiAnimation.js"></script>
     <script src="scripts/starHover.js"></script>
-    <script src="scripts/hoverBlur.js"></script>
+    <script>
+      // Only load hoverBlur.js on devices wider than 600px
+      if (window.innerWidth > 600) {
+          var script = document.createElement("script");
+          script.src = "scripts/hoverBlur.js";
+          document.head.appendChild(script);
+      }
+  </script>
     <div class="main-content">
       <div class="bubble-about">
           <h2 class="bubble-about-h">Who am I?</h2>

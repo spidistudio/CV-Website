@@ -1,5 +1,8 @@
 /* Small screens (phones) */
 @media (max-width: 600px) {
+    body {
+        overflow:auto;
+    }
 
     @keyframes slideInAbout {
         0% {
@@ -127,6 +130,20 @@
         animation: none;
         padding-top: 25px;
         padding-bottom: 25px;
+    }
+
+    .personal-image {
+        transition: none;
+        animation: none;
+    }
+
+    .bubble-image:hover {
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    }
+
+    .personal-image:hover {
+        transform: scale(1);
     }
     
 }
