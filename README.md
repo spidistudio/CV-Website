@@ -1,11 +1,18 @@
+# This is my personal CV website, which showcases my experience working in this field.
+
 ## About Me
 
-This is my personal CV website, which showcases my experience working in this field. <br>
 I started learning **HTML at 11 years old**, when I learned how to make a portofolio. Simple text, a link to my Youtube channel and school. <br>
 At 12 I started learning Python. At 13 I started learning C# and made some **3D computer and mobile games**. <br>
 At 14 I've started doing projects for other people using **Python automation**, web scraping and process automation. I've used various solutions such as **proxy rotation**, Selenium for automated browsing, **Google Maps API** for business info extraction...<br>
 Today, at 17 years old, I'm looking for more. More information. More knowledge. More experience. <br>
 Any project, idea or script you want done, I am willing to do and learn how to improve.
+
+## How to Use
+
+To set up and use this CV website, follow these steps:
+1. Clone the repository to your local machine.
+2. Open the `main.html` file in your browser to view the CV website.
 
 ## Terms of Use
 
@@ -40,14 +47,3 @@ This project uses CSS code from the following contributors under the MIT License
 - **Zameerahmad01 (Zameer Amad)** (Copyright (c) 2024)
 
 The CSS code can be found in the file `styles/socials.css`. Thanks to the original authors for their contributions to this project!
-
-## How to Use
-
-To set up and use this CV website, follow these steps:
-1. Clone the repository to your local machine.
-2. Open the `main.html` file in your browser to view the CV website.
-3. Customize the HTML and CSS to add your own details and design preferences.
-
-## Contributing
-
-If you'd like to contribute to this project, feel free to fork the repository, make improvements, and submit a pull request.
