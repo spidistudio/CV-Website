@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-
+    overflow: hidden;
 }
 
 h1, h2, h3 {
@@ -262,6 +262,7 @@ h1, h2, h3 {
     height: 100vh;
     pointer-events: none;
     overflow: hidden;
+    z-index: 200;
 }
 
 /* Emoji confetti styles */
@@ -269,6 +270,7 @@ h1, h2, h3 {
     font-size: 1.5rem;
     position: absolute;
     opacity: 0;
+    z-index: 200;
     transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Initial jump effect */
 }
 
