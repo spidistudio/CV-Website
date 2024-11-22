@@ -174,6 +174,29 @@ h1, h2, h3 {
     position: relative; /* Required for absolute positioning of the blur */
 }
 
+.bubble-projects {
+    width: 80%;
+    max-width: 345px;
+    height: 220px;
+    border-radius: 15px;
+    background-color: #0f0f0f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    margin: 2rem 63rem 20px; /* Set margin-top to 14rem */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInAbout 1s ease;
+    left: 26em; /* Set final position */
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+.bubble-projects-h{
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 0px;
+}
+
 /* This is the wrapper that holds the entire page's content */
 .main-content .main-content-2 {
     position: relative;
@@ -247,6 +270,14 @@ h1, h2, h3 {
 }
 
 .about-paragraph {
+    padding-left: 25px;
+    padding-bottom: 25px;
+    font-size: 15px;
+    word-spacing: 0.2em;
+    line-height: 1.4;
+}
+
+.projects-paragraph {
     padding-left: 25px;
     padding-bottom: 25px;
     font-size: 15px;

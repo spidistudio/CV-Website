@@ -52,7 +52,7 @@
         }
     }
 
-    .bubble-about, .bubble-socials, .bubble-fiverr-stats, .bubble-image, .bubble-tools {
+    .bubble-about, .bubble-socials, .bubble-fiverr-stats, .bubble-image, .bubble-tools, .bubble-projects {
         max-width: 90%; /* Limit the width to avoid overflow */
         grid-template-columns: 1fr;
         display: flex;
