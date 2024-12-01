@@ -1,3 +1,8 @@
+:root {
+    --bubble-background: #0f0f0f;
+    --hover-before: #a6a6a6;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #131414;
@@ -75,7 +80,7 @@ h1, h2, h3 {
     100% {
         transform: translateX(0); /* End at the original position */
         opacity: 1; /* Fully visible */
-        margin-left: 63rem;
+        margin-left: 63rem;;
     }
 }
 
@@ -95,12 +100,28 @@ h1, h2, h3 {
     }
 }
 
+@keyframes slideInProjects {
+    0% {
+        transform: translateX(-100%); /* Start from the left */
+        opacity: 0; /* Start invisible */
+        margin-left: 150rem; /* Start with negative margin */
+    }
+    75% {
+        transform: (translateX(-80%));
+    }
+    100% {
+        transform: translateX(0); /* End at the original position */
+        opacity: 1; /* Fully visible */
+        left: 26em;
+    }
+}
+
 .bubble-about {
     width: 80%;
     max-width: 550px;
     height: 180px;
     border-radius: 15px;
-    background-color: #0f0f0f;
+    background-color: var(--bubble-background);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
     margin: 14rem 26rem 20px; /* Set margin-top to 14rem */
     display: flex;
@@ -117,7 +138,7 @@ h1, h2, h3 {
     max-width: 130px;
     height: 412px;
     border-radius: 15px;
-    background-color: #0f0f0f;
+    background-color: var(--bubble-background);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
     margin: 2rem 26rem 20px; /* Change top margin to match bubble-about */
     display: flex;
@@ -137,7 +158,7 @@ h1, h2, h3 {
     max-width: 403px;
     height: 412px;
     border-radius: 15px;
-    background-color: #0f0f0f;
+    background-color: var(--bubble-background);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
     margin-top: -27rem;
     margin-left: 36rem;
@@ -163,7 +184,7 @@ h1, h2, h3 {
     max-width: 320px;
     max-height: 320px;
     border-radius: 15px; /* Match the bubble style */
-    background-color: #0f0f0f; /* Background color for the bubble */
+    background-color: var(--bubble-background); /* Background color for the bubble */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Shadow for depth */
     margin-top: -39.5rem;
     margin-left: 63rem;
@@ -179,13 +200,13 @@ h1, h2, h3 {
     max-width: 345px;
     height: 220px;
     border-radius: 15px;
-    background-color: #0f0f0f;
+    background-color: var(--bubble-background);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
     margin: 2rem 63rem 20px; /* Set margin-top to 14rem */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    animation: slideInAbout 1s ease;
+    animation: slideInProjects 1s ease;
     left: 26em; /* Set final position */
     padding-right: 15px;
     padding-bottom: 10px;
@@ -250,7 +271,7 @@ h1, h2, h3 {
     max-width: 140px;
     height: 630px;
     border-radius: 15px;
-    background-color: #0f0f0f;
+    background-color: var(--bubble-background);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     margin-top: -41rem;
     margin-left: 87.5rem;
@@ -318,7 +339,7 @@ h1, h2, h3 {
 .hover-word {
     position: relative;
     cursor: pointer;
-    color: #a6a6a6;
+    color: var(--hover-before);
     transition: color 0.3s ease;
 }
 
